@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle node-express-gen@0.0.0~prestart: node-express-gen@0.0.0
+6 silly lifecycle node-express-gen@0.0.0~prestart: no script for prestart, continuing
+7 info lifecycle node-express-gen@0.0.0~start: node-express-gen@0.0.0
+8 verbose lifecycle node-express-gen@0.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle node-express-gen@0.0.0~start: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\smendoza.DISS\git\node-apps\node-express-gen\node_modules\.bin;C:\Users\smendoza.DISS\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\smendoza.DISS\bin;C:\Program Files\Java\jdk1.6.0_43\jre\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Microsoft SQL Server\90\Tools\binn;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies;C:\Program Files\Java\jdk1.6.0_43\bin;C:\projects\trunk\tools\ant\bin;C:\projects\trunk\apache-maven-2.2.1\bin;C:\Program Files\SlikSvn\bin;C:\projects\trunk\tools\resin\bin;C:\Program Files\SlikSvn\bin;C:\projects\tools\jboss\bin;C:\projects7\trunk\apache-tomcat-7.0.62\bin;C:\Program Files (x86)\Skype\Phone;C:\Program Files (x86)\Brackets\command;C:\HashiCorp\Vagrant\bin;C:\Program Files\nodejs;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn;C:\Program Files\Microsoft SQL Server\90\DTS\Binn;C:\Users\smendoza.DISS\AppData\Local\Android\sdk\platform-tools;C:\Users\smendoza.DISS\AppData\Local\Android\sdk\tools;C:\Users\smendoza.DISS\AppData\Local\atom\bin;C:\Users\smendoza.DISS\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+10 verbose lifecycle node-express-gen@0.0.0~start: CWD: C:\Users\smendoza.DISS\git\node-apps\node-express-gen
+11 silly lifecycle node-express-gen@0.0.0~start: Args: [ '/d /s /c', 'node ./bin/www' ]
+12 silly lifecycle node-express-gen@0.0.0~start: Returned: code: 1  signal: null
+13 info lifecycle node-express-gen@0.0.0~start: Failed to exec start script
+14 verbose stack Error: node-express-gen@0.0.0 start: `node ./bin/www`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:233:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid node-express-gen@0.0.0
+16 verbose cwd C:\Users\smendoza.DISS\git\node-apps\node-express-gen
+17 error Windows_NT 6.1.7601
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v5.0.0
+20 error npm  v3.3.6
+21 error code ELIFECYCLE
+22 error node-express-gen@0.0.0 start: `node ./bin/www`
+22 error Exit status 1
+23 error Failed at the node-express-gen@0.0.0 start script 'node ./bin/www'.
+23 error This is most likely a problem with the node-express-gen package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./bin/www
+23 error You can get their info via:
+23 error     npm owner ls node-express-gen
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
