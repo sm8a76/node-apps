@@ -22,7 +22,6 @@ app.use(session({
 function auth (req, res, next) {
     
     console.log(req.headers);
-    console.log('User cookie:' + req.signedCookies.user);
     console.log('authorization header:' + req.headers.authorization);
 
     if (!req.session.user) {
