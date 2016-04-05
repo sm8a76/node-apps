@@ -4,7 +4,7 @@ var config = require('../config.js');
 
 exports.getToken = function (user) {
     return jwt.sign(user, config.secretKey, {
-        expiresIn: 3600
+        expiresIn: "1h"
     });
 };
 
@@ -17,7 +17,7 @@ exports.verifyOrdinaryUser = function (req, res, next) {
         // verifies secret and checks exp
         jwt.verify(token, config.secretKey, function (err, decoded) {
             if (err) {
-                var err = new Error('You are not authenticated!');
+                var err = new Error('You are not authenticated: ' + err);
                 err.status = 401;
                 return next(err);
             } else {
@@ -34,3 +34,20 @@ exports.verifyOrdinaryUser = function (req, res, next) {
         return next(err);
     }
 };
+
+exports.verifyAdmin = function (req, res, next) {
+    if(!req.decoded){
+        var err = new Error('You are not authenticated!');
+        err.status = 401;
+        return next(err);
+    }
+    
+    if(req.decoded._doc.admin){
+        next();        
+    } else {
+        var err = new Error('You are not authorized to perform this operation!');
+        err.status = 403;
+        return next(err);        
+    }  
+    
+}

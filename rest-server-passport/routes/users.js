@@ -6,11 +6,15 @@ var Verify    = require('./verify');
 
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', Verify.verifyOrdinaryUser, Verify.verifyAdmin,  function(req, res, next) {
+    User.find({}, function (err, users) {
+        if (err) res.status(500).json({err: err});
+        
+        res.json(users);
+    });
 });
 
-router.post('/register', function(req, res) {
+router.post('/register', Verify.verifyOrdinaryUser, Verify.verifyAdmin, function(req, res) {
     User.register(new User({ username : req.body.username }),
       req.body.password, function(err, user) {
         if (err) {
