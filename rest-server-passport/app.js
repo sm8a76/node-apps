@@ -14,7 +14,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     // we're connected!
-    console.log("Connected correctly to server");
+    console.log("Connected correctly to mongoDB server");
 });
 
 
@@ -25,6 +25,15 @@ var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 
 var app = express();
+// Secure traffic only
+app.all('*', function(req, res, next){
+  console.log('req start: ',req.secure, req.hostname, req.url, app.get('port'));
+  if (req.secure) {
+    return next();
+  };
+
+ res.redirect('https://'+req.hostname+':'+app.get('secPort')+req.url);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

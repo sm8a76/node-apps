@@ -17,7 +17,7 @@ router.get('/', Verify.verifyOrdinaryUser, Verify.verifyAdmin,  function(req, re
 router.post('/register', function(req, res) {
     User.register(new User({ username : req.body.username }),
         req.body.password, 
-        function(err, user) {-
+        function(err, user) {
             if (err) {
                 return res.status(500).json({err: err});
             }

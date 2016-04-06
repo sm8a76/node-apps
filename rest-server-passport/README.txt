@@ -14,5 +14,10 @@ npm install passport passport-local passport-local-mongoose --save
 npm install jsonwebtoken --save
 
 
+/bin
+openssl genrsa 1024 > private.key
+openssl req -new -key private.key -out cert.csr
+openssl x509 -req -in cert.csr -signkey private.key -out certificate.pem
+
 npm start
 
